@@ -1,0 +1,16 @@
+{
+  "start_year": 2010,
+  "end_year": 2025,
+  "n_annual_observations": 16,
+  "real_gdp_total_change_pct": 45.80404128887545,
+  "real_gdp_pc_total_change_pct": 2.292060432946297,
+  "population_total_change_pct": 42.53700695029969,
+  "years_real_gdp_up_per_capita_down": [
+    2017,
+    2018,
+    2019,
+    2021
+  ],
+  "max_absolute_gdp_population_identity_discrepancy_pct": 4.539701947692265e-10,
+  "max_absolute_annual_log_decomposition_residual": 6.139089236967266e-12
+}

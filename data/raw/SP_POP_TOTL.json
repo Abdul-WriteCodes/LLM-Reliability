@@ -1,0 +1,268 @@
+[
+  {
+    "page": 1,
+    "pages": 1,
+    "per_page": 2000,
+    "total": 16,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+  },
+  [
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2025",
+      "value": 237527782,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2024",
+      "value": 232679478,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2023",
+      "value": 227882945,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2022",
+      "value": 223150896,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2021",
+      "value": 218529286,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2020",
+      "value": 213996181,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2019",
+      "value": 209485641,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2018",
+      "value": 204938755,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2017",
+      "value": 200254579,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2016",
+      "value": 195443700,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2015",
+      "value": 190671878,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2014",
+      "value": 185896915,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2013",
+      "value": 181049443,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2012",
+      "value": 176200625,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2011",
+      "value": 171379598,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.TOTL",
+        "value": "Population, total"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2010",
+      "value": 166642886,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    }
+  ]
+]

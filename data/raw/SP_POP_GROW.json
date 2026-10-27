@@ -1,0 +1,268 @@
+[
+  {
+    "page": 1,
+    "pages": 1,
+    "per_page": 2000,
+    "total": 16,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+  },
+  [
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2025",
+      "value": 2.06227178599451,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2024",
+      "value": 2.08297776184189,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2023",
+      "value": 2.09838916935738,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2022",
+      "value": 2.09281687128387,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2021",
+      "value": 2.09618685225463,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2020",
+      "value": 2.13029714344341,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2019",
+      "value": 2.1944019229433,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2018",
+      "value": 2.31217263003389,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2017",
+      "value": 2.43170936923065,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2016",
+      "value": 2.47183239057048,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2015",
+      "value": 2.53617348598208,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2014",
+      "value": 2.64221399374699,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2013",
+      "value": 2.71468991073627,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2012",
+      "value": 2.77422930277333,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2011",
+      "value": 2.80278519998649,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    },
+    {
+      "indicator": {
+        "id": "SP.POP.GROW",
+        "value": "Population growth (annual %)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2010",
+      "value": 2.795149361277,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 1
+    }
+  ]
+]

@@ -1,0 +1,30 @@
+{
+  "country": "NGA",
+  "start_year": 2010,
+  "end_year": 2025,
+  "retrieved_at_utc": "2026-10-27T11:27:14.830474+00:00",
+  "source": "World Bank World Development Indicators API v2",
+  "api": {
+    "real_gdp_lcu": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.KN?format=json&date=2010%3A2025&per_page=2000",
+    "real_gdp_per_capita_lcu": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.PCAP.KN?format=json&date=2010%3A2025&per_page=2000",
+    "population": "https://api.worldbank.org/v2/country/NGA/indicator/SP.POP.TOTL?format=json&date=2010%3A2025&per_page=2000",
+    "gdp_growth_reported_pct": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2010%3A2025&per_page=2000",
+    "population_growth_reported_pct": "https://api.worldbank.org/v2/country/NGA/indicator/SP.POP.GROW?format=json&date=2010%3A2025&per_page=2000",
+    "cpi_inflation_pct": "https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?format=json&date=2010%3A2025&per_page=2000",
+    "nominal_gdp_current_usd": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.CD?format=json&date=2010%3A2025&per_page=2000",
+    "real_household_consumption_per_capita_usd": "https://api.worldbank.org/v2/country/NGA/indicator/NE.CON.PRVT.PC.KD?format=json&date=2010%3A2025&per_page=2000"
+  },
+  "indicator_codes": {
+    "real_gdp_lcu": "NY.GDP.MKTP.KN",
+    "real_gdp_per_capita_lcu": "NY.GDP.PCAP.KN",
+    "population": "SP.POP.TOTL",
+    "gdp_growth_reported_pct": "NY.GDP.MKTP.KD.ZG",
+    "population_growth_reported_pct": "SP.POP.GROW",
+    "cpi_inflation_pct": "FP.CPI.TOTL.ZG",
+    "nominal_gdp_current_usd": "NY.GDP.MKTP.CD",
+    "real_household_consumption_per_capita_usd": "NE.CON.PRVT.PC.KD"
+  },
+  "licenses": [
+    "World Bank indicator pages: CC BY-4.0; attribution required"
+  ]
+}

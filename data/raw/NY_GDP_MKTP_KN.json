@@ -1,0 +1,268 @@
+[
+  {
+    "page": 1,
+    "pages": 1,
+    "per_page": 2000,
+    "total": 16,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+  },
+  [
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2025",
+      "value": 226519398369100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2024",
+      "value": 217779133789938,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2023",
+      "value": 209260019245452,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2022",
+      "value": 202543859937900,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2021",
+      "value": 194158485984800,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2020",
+      "value": 192028406013100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2019",
+      "value": 205090405582400,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2018",
+      "value": 200658993617700,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2017",
+      "value": 196873592169800,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2016",
+      "value": 195299698036200,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2015",
+      "value": 198509333815600,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2014",
+      "value": 193379567006900,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2013",
+      "value": 181902058864500,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2012",
+      "value": 170525716392500,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2011",
+      "value": 163605119742100,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": {
+        "id": "NY.GDP.MKTP.KN",
+        "value": "GDP (constant LCU)"
+      },
+      "country": {
+        "id": "NG",
+        "value": "Nigeria"
+      },
+      "countryiso3code": "NGA",
+      "date": "2010",
+      "value": 155358792778800,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    }
+  ]
+]

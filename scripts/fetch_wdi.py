@@ -1,7 +1,9 @@
-"""Download WDI Nigeria data, preserving raw source responses and fetch metadata.
+""" This script pulls dataset from the World Development Indicators (WDI) 
 
-Use `python scripts/fetch_wdi.py` from the repository root.
-Requires internet access to the World Bank API when executed by the researcher.
+Key Operation: Download WDI Nigeria data, preserving raw source responses and fetch metadata.
+
+Run this on the repository root to execute this script: `python scripts/fetch_wdi.py` 
+Note: Running this requires internet access to the World Bank API for it to be successful in pulling dataset.
 """
 from __future__ import annotations
 import json
