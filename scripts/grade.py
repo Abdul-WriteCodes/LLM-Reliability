@@ -8,6 +8,7 @@ Does not pretend keyword matching is a valid hallucination detector.
 """
 from __future__ import annotations
 import json
+import argparse
 from pathlib import Path
 import re
 import pandas as pd
@@ -38,20 +39,26 @@ def grade_one(item, response):
         try:
             v = float(response.get("numeric_value"))
         except (TypeError, ValueError):
-            return None, "manual: missing or invalid numeric_value"
+            return False, "automatic: missing or invalid numeric_value"
         # Values are rounded to 2dp in the benchmark. Allow <=0.25 pp tolerance.
         return abs(v - float(item["reference"])) <= 0.25, "automatic numeric"
     if answer_type == "yes_no":
         val = normalize_yes_no(response.get("yes_no"))
         if val is None:
-            return None, "manual: missing yes_no field"
+            return False, "automatic: missing yes_no field"
         return val == item["reference"], "automatic binary"
     # Interpretation requires claim-level human scoring, not keyword matching.
     return None, "human: correctness + unsupported-claim annotation"
 
 
 def main():
-    path = RESULTS / "model_outputs.jsonl"
+    parser = argparse.ArgumentParser(description='Grade saved model responses')
+    parser.add_argument('--input', type=Path, default=RESULTS / 'model_outputs.jsonl')
+    parser.add_argument('--prefix', default='', help='Prefix output filenames, e.g. pilot_')
+    args = parser.parse_args()
+    if '/' in args.prefix or '\\' in args.prefix:
+        parser.error('Prefix must not contain directory separators')
+    path = args.input
     key_path = RESULTS / "answer_key.jsonl"
     if not path.exists():
         raise SystemExit("Provide results/model_outputs.jsonl using the documented response format, then rerun")
@@ -78,17 +85,19 @@ def main():
             "grading_method": grading, "human_correct": "", "unsupported_claim": "",
             "contradicted_data": "", "fabricated_statistic": "", "unjustified_causality": "",
             "appropriate_abstention": "", "notes": "", "response_text": json.dumps(response, ensure_ascii=False),
+            "parse_error": output.get("parse_error", ""),
+            "finish_reason": output.get("finish_reason", ""),
         })
     df = pd.DataFrame(rows)
-    (RESULTS / "review_annotations.csv").parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(RESULTS / "review_annotations.csv", index=False)
+    (RESULTS / (args.prefix + "review_annotations.csv")).parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(RESULTS / (args.prefix + "review_annotations.csv"), index=False)
     scored = df.loc[df["automated_correct"].notna()].copy()
     if not scored.empty:
         scored["automated_correct"] = scored["automated_correct"].astype(bool)
         summary = scored.groupby(["model", "condition"], as_index=False).agg(
             evaluated=("automated_correct", "size"),
             accuracy=("automated_correct", "mean"))
-        summary.to_csv(RESULTS / "objective_accuracy.csv", index=False)
+        summary.to_csv(RESULTS / (args.prefix + "objective_accuracy.csv"), index=False)
         print(summary.to_string(index=False))
     print(f"Saved {len(df)} response annotation rows; human review is REQUIRED for unsupported claims")
 
