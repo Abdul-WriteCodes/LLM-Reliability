@@ -1,106 +1,79 @@
-# Kopt-OS (Reflex rebuild)
+# Nigeria WDI: one dataset, two reproducible 8p8.dev research studies
 
-A rebuild of Kopt-OS — the Streamlit cooperative-society app — on
-[Reflex](https://reflex.dev). Same Google Sheets backend, same features:
-org registration, member sign-up, contributions, and loan requests /
-approvals / repayments.
+An **executable starter project** for two linked research tracks:
 
-## What changed vs. the Streamlit version
+1. **Reproducible economic analysis:** aggregate real GDP, population and real GDP per capita in Nigeria (2010–2025).
+2. **LLM interpretation benchmark:** factual numerical reasoning and epistemic reliability about the exact same data.
 
-- **UI framework**: Reflex compiles to a real React frontend + FastAPI
-  backend instead of Streamlit's rerun-the-script model. State updates are
-  event-driven, so only the parts of the UI that change actually re-render.
-- **No pandas in state**: `sheets.py` now returns plain `list[dict]` instead
-  of DataFrames, since that's what Reflex state vars serialize cleanly.
-  All the aggregation logic (totals, balances) is still there, just done
-  with plain Python.
-- **Session handling**: Streamlit's `st.session_state` is replaced by Reflex's
-  `rx.State` — each browser tab automatically gets its own isolated state
-  instance, so `AuthState` *is* the session.
-- **Secrets**: `st.secrets` is replaced by environment variables (`.env` file).
-- **Routing**: Streamlit's manual `if role == "admin": ...` branching is
-  replaced by real routes — `/`, `/admin`, `/member` — each with its own
-  page and state, guarded by `on_load` handlers that redirect unauthenticated
-  or wrong-role users back to `/`.
+**Important:** This ZIP does **not** claim to contain a freshly downloaded Nigerian dataset or actual model evaluations. The code fetches the data from the official WDI API when *you run it online*. No LLM API call is made by the starter code. Final results must be calculated and checked locally before publication.
 
-## Project layout
+## Quick start
 
-```
-kopt_os/
-├── kopt_os.py          # App entry point — registers routes/pages
-├── sheets.py            # Google Sheets data layer (same tabs/schema as before)
-├── styles.py             # Shared colors/spacing constants
-├── state/
-│   ├── auth.py           # Session, login, registration (base state)
-│   ├── admin.py          # Admin dashboard state (inherits AuthState)
-│   └── member.py         # Member dashboard state (inherits AuthState)
-├── pages/
-│   ├── landing.py        # "/" — login / register org / join as member
-│   ├── admin.py           # "/admin"
-│   └── member.py          # "/member"
-└── components/
-    └── navbar.py
-```
-
-## Setup
-
-### 1. Google Sheet + service account
-
-Same as the original app — see the sheet/service-account steps in your old
-`SETUP.md` if you still have it: create a sheet, create a GCP service
-account with Sheets + Drive API access, share the sheet with the service
-account's email, and download the JSON key.
-
-### 2. Configure environment
+From this folder using Python 3.10+:
 
 ```bash
-cp .env.example .env
-```
-
-Edit `.env`:
-
-```
-SHEET_ID=your-sheet-id-from-the-url
-GCP_SERVICE_ACCOUNT_FILE=service_account.json   # path to your downloaded key
-```
-
-Place your downloaded `service_account.json` in the project root (same
-folder as `rxconfig.py`). **Don't commit it.**
-
-For deployment (Railway, Render, Fly, etc.) where you can't easily upload a
-file, set `GCP_SERVICE_ACCOUNT_INFO` instead — the entire JSON key file
-contents as a single-line env var — and skip `GCP_SERVICE_ACCOUNT_FILE`.
-
-### 3. Install and run
-
-```bash
-python -m venv venv && source venv/bin/activate   # optional but recommended
+python -m venv .venv
+# Activate it in your shell, then:
 pip install -r requirements.txt
-reflex init      # first time only, sets up the frontend
-reflex run
+python scripts/fetch_wdi.py
+python scripts/analyse.py
+python scripts/build_benchmark.py
+pytest -q
 ```
 
-This starts the backend on `:8000` and frontend on `:3000`. Open
-`http://localhost:3000`.
+These steps produce:
 
-### 4. Deploy
+```text
+data/
+  nigeria_wdi_2010_2025.csv
+  provenance.json
+  raw/*.json
+outputs/
+  analysis_table.csv
+  key_results.json
+  findings.md
+  indexed_growth.png
+  annual_growth.png
+results/
+  benchmark_manifest.json
+  benchmark_prompts.jsonl     # Provide ONLY these prompts to models
+  answer_key.jsonl             # DO NOT give these to models
+```
 
-Easiest path is **Reflex Cloud** (`reflex deploy`) since it's built for
-exactly this. If you'd rather keep everything self-hosted alongside
-BizTrack-OS, any host that can run a long-lived Python + Node process works
-(Railway, Render, Fly.io) — just set the same env vars there and run
-`reflex run --env prod`.
+The first run requires internet access to `https://api.worldbank.org`. Freeze the dated `data/` files in version control or an archival release. To update the snapshot, deliberately rerun the fetch step and version the change, not silently replace it.
 
-## Notes / things worth knowing
+## Running the LLM experiment
 
-- All Google Sheets calls are still synchronous network requests, same as
-  the original. For a small cooperative (dozens to low hundreds of members)
-  this is fine. If it ever becomes a bottleneck, the event handlers in
-  `state/admin.py` / `state/member.py` are the place to convert to Reflex
-  background tasks (`@rx.event(background=True)`) so slow Sheets calls don't
-  block a single user's UI.
-- Passwords are still SHA-256 hashed with no salt, matching the original
-  app. Fine for an internal MVP; worth upgrading to `bcrypt`/`argon2` before
-  this handles real cooperative funds at scale.
-- The monthly contributions chart on the member dashboard uses
-  `rx.recharts` (bundled with Reflex) instead of Streamlit's `st.bar_chart`.
+Read `RESEARCH_PROTOCOL.md` before making any API calls. Pick and pin exact model IDs, log prompts, tool access, time, and decoding parameters. For each record in `results/benchmark_prompts.jsonl`, collect a response and write a line in `results/model_outputs.jsonl`:
+
+```json
+{"item_id":"NGA-WDI-001","condition":"A_table_only","model":"vendor/exact-version","repeat":1,"response":{"answer":"Increased 5.12%","numeric_value":5.12,"yes_no":null,"evidence":"Computed from the two annual GDP observations","confidence":0.9,"abstained":false}}
+```
+
+(The `5.12` shown above is only a **format illustration**, not a Nigerian WDI result.)
+
+Then:
+
+```bash
+python scripts/grade.py
+```
+
+Objective accuracy reports are calculated where possible. `results/review_annotations.csv` is generated for independent manual reviews of claims, invented facts, misleading interpretations and unwarranted causality. The code **does not** use unreliable keyword heuristics to label hallucinations.
+
+## Two suggested publication pages
+
+- **8p8.dev/research/**: *Growth Without Prosperity? Nigeria's GDP, Population, and Per-Capita Output, 2010–2025.* Embed charts and link the dated dataset and reproducible source.
+- **8p8.dev/research/**: *Can LLMs Reliably Interpret Economic Data? A Nigerian WDI Benchmark.* Show evaluation conditions, human rubrics, model version metadata and failures/successes.
+
+Actual URLs/slugs are illustrative, not routes created by this ZIP.
+
+## Key cautions
+
+- **2010–2025 = 16 inclusive annual observations** (15 years elapsed). A window from 2011–2025 has 15 observations.
+- **Real GDP and population are not independent of real GDP per capita**: the latter is GDP divided by population. Decomposition is an identity, not causal econometrics.
+- **GDP per capita is not median income or a household welfare measure**. Never claim it proves changes in poverty or prosperity without supporting data.
+- **Constant LCU** values express inflation-adjusted local production, not current USD amounts.
+- National accounts change after statistical revisions; preserve data and retrieval timestamps.
+- WDI series can contain nulls; this project refuses to silently fill missing *core* data.
+
+Source: World Bank World Development Indicators, CC BY 4.0 indicator pages; cite the World Bank and retrieval date.
