@@ -1,0 +1,4 @@
+model,condition,evaluated,accuracy
+openai/gpt-6-luna,A_table_only,24,1.0
+openai/gpt-6-luna,B_with_metadata,24,0.9583333333333334
+openai/gpt-6-luna,C_with_verification,24,1.0

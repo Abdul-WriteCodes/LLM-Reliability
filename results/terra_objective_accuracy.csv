@@ -1,0 +1,4 @@
+model,condition,evaluated,accuracy
+openai/gpt-6.1-terra,A_table_only,24,1.0
+openai/gpt-6.1-terra,B_with_metadata,24,1.0
+openai/gpt-6.1-terra,C_with_verification,24,1.0

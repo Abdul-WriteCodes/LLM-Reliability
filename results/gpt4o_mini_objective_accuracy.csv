@@ -1,0 +1,4 @@
+model,condition,evaluated,accuracy
+openai/gpt-4o-mini-2024-07-18,A_table_only,24,0.3333333333333333
+openai/gpt-4o-mini-2024-07-18,B_with_metadata,24,0.375
+openai/gpt-4o-mini-2024-07-18,C_with_verification,24,0.4166666666666667

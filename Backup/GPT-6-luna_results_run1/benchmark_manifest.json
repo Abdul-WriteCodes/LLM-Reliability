@@ -1,0 +1,14 @@
+{
+  "items": 30,
+  "conditions": [
+    "A_table_only",
+    "B_with_metadata",
+    "C_with_verification"
+  ],
+  "prompts": 90,
+  "dataset_years": [
+    2010,
+    2025
+  ],
+  "warning": "Do NOT give answer_key.jsonl to the evaluated models. Run each prompt across repeats with fixed recorded model versions."
+}
